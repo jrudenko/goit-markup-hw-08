@@ -1,0 +1,23 @@
+:root {
+    /* color */
+    --primary-text-color: #212121;
+    --text-color-logo: #000000;
+    --title-text-color: #757575;
+    --secondary-title-text-color: #AFB1B8;
+    --accent-color: #2196F3;
+    --section-background-colour: #2F303A;
+    --main-page-color: #FFFFFF;
+    --secondary-backgraund-color: #F5F4FA;
+    --hero_btn-backgraund-color: #188CE8;
+
+    /* others */
+    --items: 3;
+    --indent: 30px;
+
+    /* transform */
+    --timing-transform: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    --timing-text-color: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    --timing-backgraund-color: backgraund-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+

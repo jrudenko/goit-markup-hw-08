@@ -1,0 +1,41 @@
+/* section clients */
+.clients {
+    @include section;
+
+    &__list {
+        box-sizing: border-box;
+        padding: 0;
+        width: 170px;
+        height: 92px;
+        --items: 6;
+    
+        }
+    
+    &__link:hover,
+    &__link:focus {
+        border-color: var(--accent-color);
+        color: var(--accent-color);
+        }
+    
+    &__icon {
+        fill: currentColor;
+        }
+    
+    
+    &__link {
+        height: 92px;
+        display: flex;
+        object-fit: contain;
+        justify-content: center;
+        align-items: center;
+        contain: content;
+        border: 1px solid var(--secondary-title-text-color);
+        border-radius: 4px;
+        color: var(--secondary-title-text-color);
+    
+        transition: var(--timing-text-color), var(--timing-backgraund-color);
+        }
+}
+.clients__title {
+    margin-bottom: 50px;
+}

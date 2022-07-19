@@ -1,0 +1,12 @@
+/* section */
+.section {    
+    @include section;
+}
+
+.benefits {
+    --items: 4;
+}
+
+.about-feature {
+    margin: -15px;
+}

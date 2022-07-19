@@ -1,0 +1,44 @@
+/* grid flex-box */
+
+.card-set {
+    display: flex;
+    flex-wrap: wrap;
+    margin: calc(-1 * var(--indent) / 2);
+
+    &__item {
+        margin: calc(var(--indent) / 2);
+        flex-basis: calc((100% - var(--indent) * var(--items))/ var(--items));
+        }
+    &__heading {
+        margin-top: 0px;
+        margin-bottom: 10px;
+        width: 270px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: var(--primary-text-color);
+        }
+    
+    &__text {
+        margin-top: 0;
+        margin-bottom: 0;
+        width: 270px;
+        font-size: 14px;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+        color: var(--title-text-color);
+        }
+    &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+        border-radius: 4px;
+        width: 270px;
+        height: 120px;
+        background-color: var(--secondary-backgraund-color);
+        }
+}
+
