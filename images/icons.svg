@@ -137,5 +137,12 @@
             <path fill="#fff" style="fill:var(--color1, #fff)"
                 d="M13.983 25.247 3.552 15.296 0 18.661 13.983 32 44 3.365 40.473 0l-26.49 25.247z" />
         </symbol>
+        <symbol id="icon-burger_close" viewBox="0 0 32 32">
+            <path
+                d="M31.439 3.166 28.273 0 15.72 12.553 3.167 0 .001 3.166l12.553 12.553L.001 28.272l3.166 3.166L15.72 18.885l12.553 12.553 3.166-3.166-12.553-12.553L31.439 3.166z" />
+        </symbol>
+        <symbol id="icon-burger_menu" viewBox="0 0 48 32">
+            <path d="M0 5.333V0h48v5.333H0zm0 13.334h48v-5.333H0v5.333zM0 32h48v-5.333H0V32z" />
+        </symbol>
     </defs>
 </svg>

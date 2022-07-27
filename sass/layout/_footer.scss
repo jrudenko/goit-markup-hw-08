@@ -1,12 +1,11 @@
 /* footer */
 
 .footer {
-    padding: 60px 0;
+    @include section($indent: 60px);
     background: var(--section-background-colour);
     color: var(--main-page-color);
 
     &-title {
-        margin-bottom: 20px;
         padding: 0;
         font-style: normal;
         font-weight: 700;
@@ -17,17 +16,11 @@
         color: var(--main-page-color);
         }
 
-    &__form {
-        display: flex;
-        }
-    
-    &__placeholder {
-        width: 358px;
-        height: 50px;
-        margin-right: 12px;
-        padding-left: 16px;
-        padding-top: 15px;
-        padding-bottom: 15px;
+  
+    &__placeholder { 
+        width: 450px;
+        height: 50px;      
+        
     
         color: rgba(255, 255, 255, 0.6);
         font-style: normal;
@@ -39,11 +32,77 @@
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
         border-radius: 4px;
         background-color: var(--section-background-colour);
+
+        @include respond-to('large') {
+            width: 358px;
+        }
+        }
+        &__form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            @include respond-to('large') {
+                flex-direction: row;
+                gap: 12px;
+            }
+
         }
 }
 
+.holder {
+    @include holder($ai: center);   
+    
+    gap: 60px;
+
+    @include respond-to('medium') {
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    @include respond-to('large') {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-content: flex-start;
+        }
+
+    &__address {
+        @include holder($ai:center);
+        
+
+        @include respond-to('large') {
+            align-items: flex-start;
+            justify-content: flex-start;
+            }
+    }
+
+    &__social {
+        @include holder($ai: center);
+        justify-content: flex-start;
+        gap: 20px;
+
+        @include respond-to('large') {
+            align-items: flex-start;
+        }
+               
+    }
+    &__input {
+        @include holder($ai: center);
+        gap: 20px;
+
+        @include respond-to('large') {
+            align-items: flex-start;
+        }
+    } 
+           
+}
+
 .contacts {
-    display: block;
+    flex-direction: column;
+    align-items: center;
+    width: 232px;
     font-weight: 400;
     font-style: normal;
     font-size: 14px;
@@ -52,33 +111,24 @@
 
     transition: var(--timing-text-color);
 
-    &__adds {
-        margin-bottom: 6px;
-        color: var(--main-page-color);
+    gap: 8px;
+    @include respond-to('large') {
+        align-items: flex-start;
+        gap: 9px;
+    }        
+
+    &__adds {        
+        color: var(--main-page-color);        
         }
+        
     
-    &__mail2 {
-        margin-bottom: 9px;
+    
+    &__mail2 {        
         color: rgba(255, 255, 255, 0.6);
-        }
+       }
+    
     
     &__phone {
         color: rgba(255, 255, 255, 0.6);
         }
-}
-.holder {
-    display: inline-flex;
-    flex-direction: column;
-
-}
-
-.holder-draft {
-    margin-left: 70px;
-}
-
-
-
-.holder-draft2 {
-    margin-left: 93px;
-
 }

@@ -22,39 +22,49 @@
 
     <!-- Секція хедер -->
 
-    <header class="header">
-        <div class="container header-container">
-            <nav class="header-container">
-                <a lang="en" class="logo header-logo" href="./index.html" aria-label="Посилання на студію">Web<span
-                        class="logo__dark">Studio</span></a>
-                <!-- Навігація сайту -->
+    <header class="container header">
+        <div class="header-container">
+            <a lang="en" class="logo header-logo" href="./index.html" aria-label="Посилання на студію">Web<span
+                    class="logo__dark">Studio</span></a>
+            <button class="btn-mobile-menu" type="button" data-menu-button>
+                <svg class="btn-mobile-menu__icon" width="24" height="16" aria-label="Перемикач мобільного меню">
+                    <use class="btn-mobile-menu__burger" href="./images/icons.svg#icon-burger_menu"></use>
+                    <use class="btn-mobile-menu__close" href="./images/icons.svg#icon-burger_close"></use>
+                </svg>
+            </button>
+            <nav class="header__nav"> 
+                        <!-- Навігація сайту -->
                 <ul class="nav">
                     <li class="nav__item">
                         <a class="nav nav--current active" href="">Студія</a>
                     </li>
-                    <li class="nav__item"><a class="nav__link active" href="./portfolio.html">Портфоліо</a></li>
-                    <li class="nav__item"><a class="nav__link active" href="">Контакти</a></li>
+                    <li class="nav__item">
+                        <a class="nav__link active" href="./portfolio.html">Портфоліо</a></li>
+                    <li class="nav__item">
+                        <a class="nav__link active" href="">Контакти</a></li>
                 </ul>
-            </nav>
-            <!-- Навігація контактів -->
-            <ul class="nav nav--left">
-                <li class="nav__group">
-                    <a class="nav__mail active" href="mailto:info@devstudio.com">
-                        <svg class="nav__icon active" width="16" height="12">
-                            <use href="./images/icons.svg#icon-envelope-hover"></use>
-                        </svg>
-                        info@devstudio.com
-                    </a>
-                </li>
-                <li>
-                    <a class="nav__tel active" href="tel:+380961111111">
-                        <svg class="nav__icon active" width="10" height="16">
-                            <use href="./images/icons.svg#icon-smartphone"></use>
-                        </svg>
-                        +380961111111
-                    </a>
-                </li>
-            </ul>
+
+                <!-- Навігація контактів -->
+                
+                <ul class="nav nav--left">
+                    <li class="nav__group">
+                        <a class="nav__mail active" href="mailto:info@devstudio.com">
+                            <svg class="nav__icon active" width="16" height="12">
+                                <use href="./images/icons.svg#icon-envelope-hover"></use>
+                            </svg>
+                            info@devstudio.com
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav__tel active" href="tel:+380961111111">
+                            <svg class="nav__icon active" width="10" height="16">
+                                <use href="./images/icons.svg#icon-smartphone"></use>
+                            </svg>
+                            +380961111111
+                        </a>
+                    </li>
+                </ul>
+            </nav> 
         </div>
     </header>
 
@@ -146,6 +156,42 @@
             
         </div>
 
+        <!--Мобільне меню-->
+        <div class="mobile-menu" data-menu>
+            <ul class="list mobile-menu-nav">
+                <li class="mobile-menu-nav__item">
+                    <a class="link nav--current" href="./index.html">Студія</a>
+                </li>
+                <li class="mobile-menu-nav__item">
+                    <a class="link" href="./portfolio.html">Портфоліо</a>
+                </li>
+                <li class="mobile-menu-nav__item">
+                    <a class="link" href="">Контакти</a>
+                </li>
+            </ul>
+            <ul class="list mobile-menu-contacts">
+                <li class="mobile-menu-contacts__item">
+                    <a class="link touch" href="tel:+380961111111">+380961111111</a>
+                </li>
+                <li lang="en" class="mobile-menu-contacts__item">
+                    <a class="link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                </li>
+            </ul>
+            <ul class="list mobile-menu-socials">
+                <li class="mobile-menu-socials__item">
+                    <a class="mobile-menu-socials__link link" lang="en">Instagram</a>
+                </li>
+                <li class="mobile-menu-socials__item">
+                    <a class="mobile-menu-socials__link link" lang="en">Twitter</a>
+                </li>
+                <li class="mobile-menu-socials__item">
+                    <a class="mobile-menu-socials__link link" lang="en">Facebook</a>
+                </li>
+                <li class="mobile-menu-socials__item">
+                    <a class="mobile-menu-socials__link link" lang="en">Linkedin</a>
+                </li>
+            </ul>
+        </div>
         <!-- Секція особливості -->
 
         <section class="section">
@@ -201,19 +247,38 @@
                 <h2 class="heading clients__title">Чим ми займаємось</h2>
                 <ul class="list card-set">
                     <li class="work__items card-set__item">
-                        <img src="./images/foto-1.jpg" alt="Вид робіт 1" width="370" height="294">
+                        <picture>
+                            <source media="(min-width: 1200px)" srcset="./images/work/work-1_lg.webp 1x, ./images/work/work-1_lg@2x.webp 2x,"
+                                type="image/webp" />
+                            <source media="(min-width: 1200px)" srcset="./images/team/img-1_lg.jpg 1x, ./images/team/img-1_lg@2x.jpg 2x"
+                                type="image/jpg" />
+                            <img src="./images/work/work-1_lg.jpg" alt="Вид робіт 1" width="370" height="294">
+                        </picture>
+                        
                         <div class="work__item">
                             <p class="work__text">Десктопні додатки</p>
                         </div>
                     </li>
                     <li class="work__items card-set__item">
-                        <img src="./images/foto-2.jpg" alt="Вид робіт 2" width="370" height="294">
+                        <picture>
+                            <source media="(min-width: 1200px)" srcset="./images/work/work-2_lg.webp 1x, ./images/work/work-2_lg@2x.webp 2x,"
+                                type="image/webp" />
+                            <source media="(min-width: 1200px)" srcset="./images/work/work-2_lg.jpg 1x, ./images/team/img-2_lg@2x.jpg 2x"
+                                type="image/jpg" />
+                            <img src="./images/work/work-2_lg.jpg" alt="Вид робіт 2" width="370" height="294">
+                       </picture>
                         <div class="work__item">
                             <p class="work__text">Мобільні додатки</p>
                         </div>
                     </li>
                     <li class="work__items card-set__item">
-                        <img src="./images/foto-3.jpg" alt="Вид робіт 3" width="370" height="294">
+                        <picture>
+                            <source media="(min-width: 1200px)" srcset="./images/work/work-3_lg.webp 1x, ./images/work/work-3_lg@2x.webp 2x,"
+                                type="image/webp" />
+                            <source media="(min-width: 1200px)" srcset="./images/work/work-3_lg.jpg 1x, ./images/team/img-3_lg@2x.jpg 2x"
+                                type="image/jpg" />
+                            <img src="./images/work/work-3_lg.jpg" alt="Вид робіт 3" width="370" height="294">
+                        </picture>
                         <div class="work__item">
                             <p class="work__text">Дизайнерські рішення</p>
                         </div>
@@ -223,13 +288,27 @@
         </section>
 
         <!-- Секція  Наша команда -->
-
+       
         <section class="team section">
             <div class="container">
                 <h2 class="heading clients__title">Наша команда</h2>
                 <ul class="list card-set">
                     <li class="team__card card-set__item">
-                        <img src="./images/Игорь_Демьяненко.jpg" alt="Фото Ігоря Дем'яненка" width="270" height="260">
+                        <picture>
+                            <source media="(min-width: 1200px)" srcset="./images/team/img-1_lg.webp 1x, ./images/team/img-1_lg@2x.webp 2x,"
+                                type="image/webp" />
+                            <source media="(min-width: 1200px)" srcset="./images/team/img-1_lg.jpg 1x, ./images/team/img-1_lg@2x.jpg 2x"
+                                type="image/jpg" />
+                            <source media="(min-width: 768px)" srcset="./images/team/img-1_md.webp 1x, ./images/team/img-1_md@2x.webp 2x,"
+                                    type="image/webp" />
+                            <source media="(min-width: 768px)" srcset="./images/team/img-1_md.jpg 1x, ./images/team/img-1_md@2x.jpg 2x"
+                                    type="image/jpg" />
+                            <source media="(max-width: 767px)" srcset="./images/team/img-1_sm.webp 1x, ./images/team/img-1_sm@2x.webp 2x,"
+                                type="image/webp" />
+                            <source media="(max-width: 767px)" srcset="./images/team/img-1_sm.jpg 1x, ./images/team/img-1_sm@2x.jpg 2x"
+                                type="image/jpg" />
+                            <img src="./images/team/img-1_sm.jpg" alt="Фото Ігоря Дем'яненка" width="450" height="460">
+                        </picture>    
                         <div class="team__desc">
                             <h3 class="team__name">Ігор Дем'яненко</h3>
                             <p class="team__post" lang="en">Product Designer</p>
@@ -271,7 +350,21 @@
                     </li>
 
                     <li class="team__card card-set__item">
-                        <img src="./images/Ольга_Репина.jpg" alt="Фото Ольги Рєпіної" width="270" height="260">
+                        <picture>
+                            <source media="(min-width: 1200px)" srcset="./images/team/img-2_lg.webp 1x, ./images/team/img-2_lg@2x.webp 2x,"
+                                type="image/webp" />
+                            <source media="(min-width: 1200px)" srcset="./images/team/img-2_lg.jpg 1x, ./images/team/img-2_lg@2x.jpg 2x"
+                                type="image/jpg" />
+                            <source media="(min-width: 768px)" srcset="./images/team/img-2_md.webp 1x, ./images/team/img-2_md@2x.webp 2x,"
+                                type="image/webp" />
+                            <source media="(min-width: 768px)" srcset="./images/team/img-2_md.jpg 1x, ./images/team/img-2_md@2x.jpg 2x"
+                                type="image/jpg" />
+                            <source media="(max-width: 767px)" srcset="./images/team/img-2_sm.webp 1x, ./images/team/img-2_sm@2x.webp 2x,"
+                                type="image/webp" />
+                            <source media="(max-width: 767px)" srcset="./images/team/img-2_sm.jpg 1x, ./images/team/img-2_sm@2x.jpg 2x"
+                                type="image/jpg" />
+                            <img src="./images/team/img-2_sm.jpg" alt="Фото Ольги Рєпіної" width="450" height="460">
+                        </picture>
                         <div class="team__desc">
                             <h3 class="team__name">Ольга Рєпіна</h3>
                             <p class="team__post">Frontend Developer</p>
@@ -312,7 +405,21 @@
                         </div>
                     </li>
                     <li class="team__card card-set__item">
-                        <img src="./images/Николай_Тарасов.jpg" alt="Фото Миколи Тарасова" width="270" height="260">
+                        <picture>
+                            <source media="(min-width: 1200px)" srcset="./images/team/img-3_lg.webp 1x, ./images/team/img-3_lg@2x.webp 2x,"
+                                type="image/webp" />
+                            <source media="(min-width: 1200px)" srcset="./images/team/img-3_lg.jpg 1x, ./images/team/img-3_lg@2x.jpg 2x"
+                                type="image/jpg" />
+                            <source media="(min-width: 768px)" srcset="./images/team/img-3_md.webp 1x, ./images/team/img-3_md@2x.webp 2x,"
+                                type="image/webp" />
+                            <source media="(min-width: 768px)" srcset="./images/team/img-3_md.jpg 1x, ./images/team/img-3_md@2x.jpg 2x"
+                                type="image/jpg" />
+                            <source media="(max-width: 767px)" srcset="./images/team/img-3_sm.webp 1x, ./images/team/img-3_sm@2x.webp 2x,"
+                                type="image/webp" />
+                            <source media="(max-width: 767px)" srcset="./images/team/img-3_sm.jpg 1x, ./images/team/img-3_sm@2x.jpg 2x"
+                                type="image/jpg" />
+                            <img src="./images/team/img-3_sm.jpg" alt="Фото Миколи Тарасова" width="450" height="460">
+                        </picture>                        
                         <div class="team__desc">
                             <h3 class="team__name">Микола Тарасов</h3>
                             <p class="team__post" lang="en">Marketing</p>
@@ -353,7 +460,21 @@
                         </div>
                     </li>
                     <li class="team__card card-set__item">
-                        <img src="./images/Михаил_Ермаков.jpg" alt="Фото Михайла Єрмакова" width="270" height="260">
+                        <picture>
+                            <source media="(min-width: 1200px)" srcset="./images/team/img-4_lg.webp 1x, ./images/team/img-4_lg@2x.webp 2x,"
+                                type="image/webp" />
+                            <source media="(min-width: 1200px)" srcset="./images/team/img-4_lg.jpg 1x, ./images/team/img-4_lg@2x.jpg 2x"
+                                type="image/jpg" />
+                            <source media="(min-width: 768px)" srcset="./images/team/img-4_md.webp 1x, ./images/team/img-4_md@2x.webp 2x,"
+                                type="image/webp" />
+                            <source media="(min-width: 768px)" srcset="./images/team/img-4_md.jpg 1x, ./images/team/img-4_md@2x.jpg 2x"
+                                type="image/jpg" />
+                            <source media="(max-width: 767px)" srcset="./images/team/img-4_sm.webp 1x, ./images/team/img-4_sm@2x.webp 2x,"
+                                type="image/webp" />
+                            <source media="(max-width: 767px)" srcset="./images/team/img-4_sm.jpg 1x, ./images/team/img-4_sm@2x.jpg 2x"
+                                type="image/jpg" />
+                            <img src="./images/team/img-4_sm.jpg" alt="Фото Михайла Єрмакова" width="450" height="460">
+                        </picture>                        
                         <div class="team__desc">
                             <h3 class="team__name">Михайло Єрмаков</h3>
                             <p class="team__post" lang="en">UI Designer</p>
@@ -395,7 +516,7 @@
                     </li>
                 </ul>
             </div>
-        </section>
+        </section> 
 
         <!--Секція постійні клієнти  -->
 
@@ -458,9 +579,9 @@
 
     <!-- Секція Футер -->
 
-    <footer class="footer">
-        <div class="container">
-            <div class="holder">
+    <footer class="footer container">
+        <div class="holder">
+            <div class="holder__address">
                 <a lang="en" class="logo footer-logo" href="./index.html" aria-label="Посилання на студію">Web<span
                         class="logo__light">Studio</span></a>
                 <address>
@@ -479,7 +600,7 @@
                     </ul>
                 </address>
             </div>
-            <div class="holder holder-draft">
+            <div class="holder__social">
                 <strong class="footer-title">Приєднуйтесь</strong>
                 <ul class="social-media list">
                     <li class="social-media__item">
@@ -516,24 +637,24 @@
                     </li>
                 </ul>
             </div>
-            <div class="holder holder-draft2">
+            <div class="holder__input">
                 <strong class="footer-title">Підпишіться на розсилку</strong>
-                <form class="footer__form">
-                    <label >
-                        <input class="footer__placeholder" type="email" name="email" placeholder="E-mail" />
-                    </label>
-                    <button type="submit" class="btn btn--sabmit">
-                        Підписатись
-                        <svg class="btn__icon" width="24" height="24">
-                            <use href="./images/icons.svg#icon-send"></use>
-                        </svg>
-                    </button>
-                </form>
-                
+                    <form class="footer__form">
+                        <label>
+                            <input class="footer__placeholder" type="email" name="email" placeholder="E-mail" />
+                        </label>
+                        <button type="submit" class="btn btn--sabmit">
+                            Підписатись
+                            <svg class="btn__icon" width="24" height="24">
+                                <use href="./images/icons.svg#icon-send"></use>
+                            </svg>
+                        </button>
+                    </form>
             </div>
         </div>
     </footer>
     <script src="./JS/modal.js"></script>
+    <script src="./JS/menu.js"></script>
 </body>
 
 </html>

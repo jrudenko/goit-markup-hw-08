@@ -22,10 +22,13 @@
     }
 }
 
-.header-logo {
-    margin-right: 93px;
+.header-logo {    
     padding-top: 24px;
     padding-bottom: 24px;
+
+    @include respond-to('medium') {
+          margin-right: 93px;
+        }
 }
 
 .footer-logo {
