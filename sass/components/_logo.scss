@@ -23,12 +23,18 @@
 }
 
 .header-logo {    
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding-top: 16px;
+    padding-bottom: 16px;
 
     @include respond-to('medium') {
           margin-right: 93px;
+          padding-top: 26px;
+          padding-bottom: 26px;
         }
+    @include respond-to('large') {
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
 }
 
 .footer-logo {

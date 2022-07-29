@@ -22,15 +22,15 @@
 
     <!-- Секція хедер -->
 
-    <header class="container header">
-        <div class="header-container">
+    <header class="header">
+        <div class="header-container container">
             <a lang="en" class="logo header-logo" href="./index.html" aria-label="Посилання на студію">Web<span
                     class="logo__dark">Studio</span></a>
             <button class="btn-mobile-menu" type="button" data-menu-button>
-                        <svg class="btn-mobile-menu__icon" width="24" height="16" aria-label="Перемикач мобільного меню">
-                            <use class="btn-mobile-menu__burger" href="./images/icons.svg#icon-burger_menu"></use>
-                            <use class="btn-mobile-menu__close" href="./images/icons.svg#icon-burger_close"></use>
-                        </svg>
+                <svg class="btn-mobile-menu__icon" width="24" height="16" aria-label="Перемикач мобільного меню">
+                    <use class="btn-mobile-menu__burger" href="./images/icons.svg#icon-burger_menu"></use>
+                    <use class="btn-mobile-menu__close" href="./images/icons.svg#icon-burger_close"></use>
+                </svg>
             </button>
             <nav class="header__nav">               
                 <!-- Навігація сайту -->
@@ -65,7 +65,44 @@
             </nav>            
         </div>
     </header>
+    
     <main>
+    <!-- Мобільне меню -->
+    <div class="mobile-menu" data-menu>
+        <ul class="list mobile-menu-nav">
+            <li class="mobile-menu-nav__item">
+                <a class="link" href="./index.html">Студія</a>
+            </li>
+            <li class="mobile-menu-nav__item">
+                <a class="link nav--current" href="./portfolio.html">Портфоліо</a>
+            </li>
+            <li class="mobile-menu-nav__item">
+                <a class="link" href="">Контакти</a>
+            </li>
+        </ul>
+        <ul class="list mobile-menu-contacts">
+            <li class="mobile-menu-contacts__item">
+                <a class="link touch" href="tel:+380961111111">+380961111111</a>
+            </li>
+            <li lang="en" class="mobile-menu-contacts__item">
+                <a class="link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+            </li>
+        </ul>
+        <ul class="list mobile-menu-socials">
+            <li class="mobile-menu-socials__item">
+                <a class="mobile-menu-socials__link link" lang="en">Instagram</a>
+            </li>
+            <li class="mobile-menu-socials__item">
+                <a class="mobile-menu-socials__link link" lang="en">Twitter</a>
+            </li>
+            <li class="mobile-menu-socials__item">
+                <a class="mobile-menu-socials__link link" lang="en">Facebook</a>
+            </li>
+            <li class="mobile-menu-socials__item">
+                <a class="mobile-menu-socials__link link" lang="en">Linkedin</a>
+            </li>
+        </ul>
+    </div>
         <!-- Секція Роботи -->
         <section class="section">
             <div class="container">
@@ -438,10 +475,11 @@
         </section>
 
     </main>
+    
     <!-- Секція Футер -->
 
-    <footer class="footer container">
-        <div class="holder">
+    <footer class="footer">
+        <div class="holder  container">
             <div class="holder__address">
                 <a lang="en" class="logo footer-logo" href="./index.html" aria-label="Посилання на студію">Web<span
                         class="logo__light">Studio</span></a>
@@ -515,6 +553,8 @@
             </div>
         </div>
     </footer>
+    <script src="./JS/modal.js"></script>
+    <script src="./JS/menu.js"></script>
 
 </body>
 

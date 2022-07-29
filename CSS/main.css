@@ -514,12 +514,20 @@ a {
 }
 
 .header-logo {
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 @media (min-width: 768px) {
   .header-logo {
     margin-right: 93px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+}
+@media (min-width: 1200px) {
+  .header-logo {
+    padding-top: 24px;
+    padding-bottom: 24px;
   }
 }
 
@@ -605,26 +613,30 @@ a {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  min-width: 450px;
+  width: 450px;
   height: 100%;
   background-color: var(--main-page-color);
-  padding: 0;
-  margin: 0;
-}
-@media (min-width: 768px) {
-  .modal {
-    width: 450px;
-  }
 }
 @media (min-width: 1200px) {
   .modal {
     width: 528px;
   }
 }
+.modal__hero-form {
+  margin: 40px;
+  cursor: pointer;
+  position: relative;
+}
+@media screen and (min-width: 1200px) {
+  .modal__hero-form {
+    width: 448px;
+  }
+}
 .modal__close-btn {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 8px;
+  right: 8px;
+  left: auto;
   -webkit-transform: translate(-50%, 50%);
           transform: translate(-50%, 50%);
   display: -webkit-box;
@@ -686,7 +698,7 @@ a {
 .modal__inputs textarea {
   margin: 0;
   padding: 0;
-  width: 448px;
+  width: 100%;
   height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -705,7 +717,7 @@ a {
   padding-right: 10px;
   padding-bottom: 12px;
   padding-left: 42px;
-  width: 448px;
+  width: 100%;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -1116,7 +1128,7 @@ a {
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-  width: 270px;
+  width: 100%;
 }
 @media (min-width: 1200px) {
   .team__card {
@@ -1232,8 +1244,12 @@ a {
   color: var(--main-page-color);
 }
 .footer__placeholder {
-  width: 450px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
   height: 50px;
+  padding-left: 16px;
   color: rgba(255, 255, 255, 0.6);
   font-style: normal;
   font-weight: 400;
@@ -1244,6 +1260,11 @@ a {
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background-color: var(--section-background-colour);
+}
+@media (min-width: 480px) {
+  .footer__placeholder {
+    width: 450px;
+  }
 }
 @media (min-width: 1200px) {
   .footer__placeholder {
@@ -1270,6 +1291,7 @@ a {
         -ms-flex-direction: row;
             flex-direction: row;
     gap: 12px;
+    width: 570px;
   }
 }
 
