@@ -2,9 +2,9 @@
 .logo {
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
-    letter-spacing: 0.03em;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;    
     color: var(--accent-color);
     transition: var(--timing-text-color);
 
@@ -22,20 +22,11 @@
     }
 }
 
-.header-logo {    
-    padding-top: 16px;
-    padding-bottom: 16px;
-
+.header-logo {
     @include respond-to('medium') {
-          margin-right: 93px;
-          padding-top: 26px;
-          padding-bottom: 26px;
+          margin-right: 93px;          
         }
-    @include respond-to('large') {
-        padding-top: 24px;
-        padding-bottom: 24px;
     }
-}
 
 .footer-logo {
     margin-bottom: 20px;

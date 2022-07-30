@@ -27,7 +27,8 @@
         }
     
     &--sabmit {
-        display: flex;
+        display: inline-flex;
+        align-items: center;
         width: 200px;
         height: 50px;
         padding-top: 10px;
@@ -51,10 +52,10 @@
         margin-left: 12px;
         }
     
-    &--modal {
-        margin-left: 165px;
+    &--modal {       
         outline: var(--accent-color);
-        transition: var(--timing-backgraund-color);
+        transition: var(--timing-backgraund-color);        
+        
         }
 }
 
